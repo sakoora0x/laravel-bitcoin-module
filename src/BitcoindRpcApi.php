@@ -1,6 +1,6 @@
 <?php
 
-namespace Mollsoft\LaravelBitcoinModule;
+namespace sakoora0x\LaravelBitcoinModule;
 
 use GuzzleHttp\Client;
 use Illuminate\Support\Str;

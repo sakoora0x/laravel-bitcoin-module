@@ -1,14 +1,14 @@
 <?php
 
-namespace Mollsoft\LaravelBitcoinModule\Services;
+namespace sakoora0x\LaravelBitcoinModule\Services;
 
 use Decimal\Decimal;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\Log;
-use Mollsoft\LaravelBitcoinModule\BitcoindRpcApi;
-use Mollsoft\LaravelBitcoinModule\Models\BitcoinWallet;
-use Mollsoft\LaravelBitcoinModule\WebhookHandlers\WebhookHandlerInterface;
+use sakoora0x\LaravelBitcoinModule\BitcoindRpcApi;
+use sakoora0x\LaravelBitcoinModule\Models\BitcoinWallet;
+use sakoora0x\LaravelBitcoinModule\WebhookHandlers\WebhookHandlerInterface;
 
 class SyncService
 {

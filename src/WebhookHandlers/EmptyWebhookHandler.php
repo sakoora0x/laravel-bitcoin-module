@@ -1,11 +1,11 @@
 <?php
 
-namespace Mollsoft\LaravelBitcoinModule\WebhookHandlers;
+namespace sakoora0x\LaravelBitcoinModule\WebhookHandlers;
 
 use Illuminate\Support\Facades\Log;
-use Mollsoft\LaravelBitcoinModule\Models\BitcoinAddress;
-use Mollsoft\LaravelBitcoinModule\Models\BitcoinDeposit;
-use Mollsoft\LaravelBitcoinModule\Models\BitcoinWallet;
+use sakoora0x\LaravelBitcoinModule\Models\BitcoinAddress;
+use sakoora0x\LaravelBitcoinModule\Models\BitcoinDeposit;
+use sakoora0x\LaravelBitcoinModule\Models\BitcoinWallet;
 
 class EmptyWebhookHandler implements WebhookHandlerInterface
 {

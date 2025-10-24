@@ -1,6 +1,6 @@
 <?php
 
-namespace Mollsoft\LaravelBitcoinModule\Casts;
+namespace sakoora0x\LaravelBitcoinModule\Casts;
 
 use Decimal\Decimal;
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;

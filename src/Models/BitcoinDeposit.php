@@ -1,10 +1,10 @@
 <?php
 
-namespace Mollsoft\LaravelBitcoinModule\Models;
+namespace sakoora0x\LaravelBitcoinModule\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Mollsoft\LaravelBitcoinModule\Casts\DecimalCast;
+use sakoora0x\LaravelBitcoinModule\Casts\DecimalCast;
 
 class BitcoinDeposit extends Model
 {

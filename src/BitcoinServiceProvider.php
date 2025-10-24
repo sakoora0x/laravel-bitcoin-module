@@ -1,10 +1,10 @@
 <?php
 
-namespace Mollsoft\LaravelBitcoinModule;
+namespace sakoora0x\LaravelBitcoinModule;
 
-use Mollsoft\LaravelBitcoinModule\Commands\BitcoinSyncCommand;
-use Mollsoft\LaravelBitcoinModule\Commands\BitcoinSyncWalletCommand;
-use Mollsoft\LaravelBitcoinModule\Commands\BitcoinWebhookCommand;
+use sakoora0x\LaravelBitcoinModule\Commands\BitcoinSyncCommand;
+use sakoora0x\LaravelBitcoinModule\Commands\BitcoinSyncWalletCommand;
+use sakoora0x\LaravelBitcoinModule\Commands\BitcoinWebhookCommand;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;

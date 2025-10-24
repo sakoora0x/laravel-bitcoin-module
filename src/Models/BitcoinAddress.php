@@ -1,12 +1,12 @@
 <?php
 
-namespace Mollsoft\LaravelBitcoinModule\Models;
+namespace sakoora0x\LaravelBitcoinModule\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Mollsoft\LaravelBitcoinModule\Casts\DecimalCast;
-use Mollsoft\LaravelBitcoinModule\Enums\AddressType;
+use sakoora0x\LaravelBitcoinModule\Casts\DecimalCast;
+use sakoora0x\LaravelBitcoinModule\Enums\AddressType;
 
 class BitcoinAddress extends Model
 {

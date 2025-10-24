@@ -1,6 +1,7 @@
 /.phpunit.cache
 /node_modules
 /vendor
+/coverage
 .env
 .env.backup
 .env.production

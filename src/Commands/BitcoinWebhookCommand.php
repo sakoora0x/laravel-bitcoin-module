@@ -1,11 +1,11 @@
 <?php
 
-namespace Mollsoft\LaravelBitcoinModule\Commands;
+namespace sakoora0x\LaravelBitcoinModule\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\App;
-use Mollsoft\LaravelBitcoinModule\Models\BitcoinDeposit;
-use Mollsoft\LaravelBitcoinModule\WebhookHandlers\WebhookHandlerInterface;
+use sakoora0x\LaravelBitcoinModule\Models\BitcoinDeposit;
+use sakoora0x\LaravelBitcoinModule\WebhookHandlers\WebhookHandlerInterface;
 
 class BitcoinWebhookCommand extends Command
 {

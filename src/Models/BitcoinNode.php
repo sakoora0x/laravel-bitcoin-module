@@ -1,10 +1,10 @@
 <?php
 
-namespace Mollsoft\LaravelBitcoinModule\Models;
+namespace sakoora0x\LaravelBitcoinModule\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Mollsoft\LaravelBitcoinModule\BitcoindRpcApi;
+use sakoora0x\LaravelBitcoinModule\BitcoindRpcApi;
 
 class BitcoinNode extends Model
 {

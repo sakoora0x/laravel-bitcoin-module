@@ -1,16 +1,20 @@
 {
-    "name": "mollsoft/laravel-bitcoin-module",
+    "name": "sakoora0x/laravel-bitcoin-module",
     "description": "Laravel Bitcoin Module",
-    "homepage": "https://github.com/mollsoft/laravel-bitcoin-module",
+    "homepage": "https://github.com/sakoora0x/laravel-bitcoin-module",
     "license": "MIT",
     "authors": [
+        {
+            "name": "sakoora0x",
+            "email": "sakoora0x@gmail.com"
+        },
         {
             "name": "MollSoft",
             "email": "info@mollsoft.com"
         }
     ],
     "keywords": [
-        "mollsoft",
+        "sakoora0x",
         "laravel",
         "bitcoin"
     ],
@@ -21,21 +25,36 @@
         "illuminate/contracts": "^10.0",
         "spatie/laravel-package-tools": "^1.15"
     },
+    "require-dev": {
+        "orchestra/testbench": "^8.0",
+        "phpunit/phpunit": "^10.0",
+        "mockery/mockery": "^1.5",
+        "fakerphp/faker": "^1.21"
+    },
     "autoload": {
         "psr-4": {
-            "Mollsoft\\LaravelBitcoinModule\\": "src/"
+            "sakoora0x\\LaravelBitcoinModule\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "sakoora0x\\LaravelBitcoinModule\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Mollsoft\\LaravelBitcoinModule\\BitcoinServiceProvider"
+                "sakoora0x\\LaravelBitcoinModule\\BitcoinServiceProvider"
             ],
             "aliases": {
-                "Bitcoin": "Mollsoft\\LaravelBitcoinModule\\Facades\\Bitcoin"
+                "Bitcoin": "sakoora0x\\LaravelBitcoinModule\\Facades\\Bitcoin"
             }
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    }
 }

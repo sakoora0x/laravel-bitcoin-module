@@ -1,12 +1,12 @@
 <?php
 
-namespace Mollsoft\LaravelBitcoinModule;
+namespace sakoora0x\LaravelBitcoinModule;
 
 use Decimal\Decimal;
-use Mollsoft\LaravelBitcoinModule\Enums\AddressType;
-use Mollsoft\LaravelBitcoinModule\Models\BitcoinAddress;
-use Mollsoft\LaravelBitcoinModule\Models\BitcoinNode;
-use Mollsoft\LaravelBitcoinModule\Models\BitcoinWallet;
+use sakoora0x\LaravelBitcoinModule\Enums\AddressType;
+use sakoora0x\LaravelBitcoinModule\Models\BitcoinAddress;
+use sakoora0x\LaravelBitcoinModule\Models\BitcoinNode;
+use sakoora0x\LaravelBitcoinModule\Models\BitcoinWallet;
 
 class Bitcoin
 {

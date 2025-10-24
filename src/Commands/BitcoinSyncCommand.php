@@ -1,11 +1,11 @@
 <?php
 
-namespace Mollsoft\LaravelBitcoinModule\Commands;
+namespace sakoora0x\LaravelBitcoinModule\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\App;
-use Mollsoft\LaravelBitcoinModule\Models\BitcoinWallet;
-use Mollsoft\LaravelBitcoinModule\Services\SyncService;
+use sakoora0x\LaravelBitcoinModule\Models\BitcoinWallet;
+use sakoora0x\LaravelBitcoinModule\Services\SyncService;
 
 class BitcoinSyncCommand extends Command
 {
