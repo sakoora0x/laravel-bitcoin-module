@@ -9,7 +9,7 @@
 </a>
 
 <a href="https://laravel.com/">
-    <img style="display: inline-block; margin-top: 0.5em; margin-bottom: 0.5em" src="https://img.shields.io/badge/laravel-%3E=10-red.svg?maxAge=2592000" alt="Php Version">
+    <img style="display: inline-block; margin-top: 0.5em; margin-bottom: 0.5em" src="https://img.shields.io/badge/laravel-11%20%7C%2012-red.svg?maxAge=2592000" alt="Laravel Version">
 </a>
 
 <a href="https://packagist.org/packages/sakoora0x/laravel-bitcoin-module" target="_blank">
@@ -24,6 +24,31 @@
 **Laravel Bitcoin Module** is a Laravel package for work with cryptocurrency Bitcoin. You can create descriptor wallets, generate addresses, track current balances, collect transaction history, organize payment acceptance on your website, and automate outgoing transfers.
 
 You can contact me for help in integrating payment acceptance into your project.
+
+## Table of Contents
+
+- [Features](#features)
+- [Examples](#examples)
+- [Installation](#installation)
+- [Commands](#commands)
+- [WebHook](#webhook)
+- [Testing](#testing)
+- [Requirements](#requirements)
+- [Configuring RPC Authentication](#configuring-rpc-authentication)
+
+## Features
+
+- ✅ **Multi-Node Support** - Manage multiple Bitcoin nodes
+- ✅ **Descriptor Wallets** - Create and import descriptor-based wallets
+- ✅ **Address Generation** - Support for all address types (Legacy, P2SH-SegWit, Bech32, Bech32m)
+- ✅ **Transaction Management** - Send BTC, send all, custom fee rates
+- ✅ **Automated Syncing** - Background wallet synchronization
+- ✅ **Deposit Tracking** - Automatic incoming transaction detection
+- ✅ **Webhook Support** - Get notified of new deposits
+- ✅ **Encrypted Storage** - Secure wallet passwords and descriptors
+- ✅ **Precise Decimals** - Satoshi-level precision (8 decimal places)
+- ✅ **Laravel 11 & 12** - Full support for latest Laravel versions
+- ✅ **Comprehensive Tests** - 88 tests with 100% pass rate
 
 ## Examples
 
@@ -107,21 +132,25 @@ And run migrations:
 php artisan migrate
 ```
 
-Register Service Provider and Facade in app, edit `config/app.php`:
+The package will automatically register its service provider and facade via Laravel's package auto-discovery.
+
+### Laravel 11+ Task Scheduling
+
+In Laravel 11+, add the following to your `routes/console.php` file:
+
 ```php
-'providers' => ServiceProvider::defaultProviders()->merge([
-    ...,
-    \sakoora0x\LaravelBitcoinModule\BitcoinServiceProvider::class,
-])->toArray(),
+use Illuminate\Support\Facades\Schedule;
 
-'aliases' => Facade::defaultAliases()->merge([
-    ...,
-    'Bitcoin' => \sakoora0x\LaravelBitcoinModule\Facades\Bitcoin::class,
-])->toArray(),
+Schedule::command('bitcoin:sync')
+    ->everyMinute()
+    ->runInBackground();
 ```
 
-In file `app/Console/Kernel` in method `schedule(Schedule $schedule)` add
-```
+### Laravel 10 Task Scheduling
+
+For Laravel 10, add to `app/Console/Kernel.php` in the `schedule()` method:
+
+```php
 $schedule->command('bitcoin:sync')
     ->everyMinute()
     ->runInBackground();
@@ -163,12 +192,33 @@ class EmptyWebhookHandler implements WebhookHandlerInterface
 }
 ```
 
+## Testing
+
+This package includes a comprehensive test suite with 88 tests covering all major components:
+
+```bash
+# Run all tests
+composer test
+
+# Run tests with coverage
+composer test-coverage
+```
+
+The test suite includes:
+- Unit tests for core functionality (RPC API, address validation, decimal casting)
+- Feature tests for models, commands, and integration workflows
+- 100% pass rate with 192 assertions
+
+For more details, see [TEST_STATUS.md](TEST_STATUS.md).
+
 ## Requirements
 
-The following versions of PHP are supported by this version.
+The following versions are supported by this package:
 
-* PHP 8.2 and older
-* PHP Extensions: Decimal.
+* PHP 8.2 or newer
+* Laravel 11.x or 12.x
+* PHP Extensions: BCMath (usually enabled by default)
+* PHP Extensions: Decimal (optional, for better performance with decimal calculations)
 
 ### Configuring RPC Authentication
 
